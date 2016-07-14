@@ -21,6 +21,7 @@ header span{
     display: inline-block;
     width: 100px;
     vertical-align: top;
+    white-space:nowrap;
 }
 .up-logo-line{
 	height: 12px;
