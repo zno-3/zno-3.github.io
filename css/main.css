@@ -1,7 +1,7 @@
    @font-face {
     font-family: Museo; /* Гарнитура шрифта */
-    src: url(../fonts/Museo_Cyrillic.otf); /* Для IE5-8 */
-    src: local(Museo), url(../fonts/Museo_Cyrillic.otf); /* Для остальных браузеров */
+    src: url(../fonts/Museo_Cyrillic.ttf); /* Для IE5-8 */
+    src: local(Museo), url(../fonts/Museo_Cyrillic.ttf); /* Для остальных браузеров */
    }
 
 body{
