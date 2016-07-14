@@ -1,11 +1,8 @@
-
-@font-face {
-    font-family: Museo; /* имя шрифта для CSS правил */
+   @font-face {
+    font-family: Museo; /* Гарнитура шрифта */
     src: url(../fonts/Museo_Cyrillic.otf); /* Для IE5-8 */
-    src: local("Museo"), /* проверяем наличие шрифта в ОС пользователя */
-         url(../fonts/Museo_Cyrillic.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
-  }
-
+    src: local(Museo), url(../fonts/Museo_Cyrillic.otf); /* Для остальных браузеров */
+   }
 
 body{
 	font-family: "Museo";
