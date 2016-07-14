@@ -17,7 +17,7 @@ main{
 header span{
 	color: #fff;
 	font-size: 13px;
-	line-height: 50px;
+	line-height: 30px;
     display: inline-block;
     width: 100px;
     vertical-align: top;
@@ -39,14 +39,14 @@ header span{
 	background: #5a5a5a;
 }
 .middle-logo-line{
-	height: 50px;
+	height: 30px;
 	background: #848484;
 	color:#fff;
 	padding-top: 5px;
 }
 
 .down-logo-line{
-	height: 6px;
+	height: 5px;
 	background: #5a5a5a;
 }
 
