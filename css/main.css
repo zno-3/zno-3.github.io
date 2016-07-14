@@ -16,10 +16,10 @@ main{
 /*~~~~~~~~~~~~~~ HEADER ~~~~~ FOOTER~~~~~~~~~~~~~~~~~*/
 header span{
 	color: #fff;
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 50px;
     display: inline-block;
-    width: 120px;
+    width: 100px;
     vertical-align: top;
 }
 .up-logo-line{
