@@ -295,7 +295,8 @@ header span{
 	line-height: 100px;
     width: 250px;
 }
-.infograf margin-left:-15px;
+.infograf{ margin-left:-15px;}
+
 .middle-logo-line{
 	height: 100px;
 	padding-top: 5px;
