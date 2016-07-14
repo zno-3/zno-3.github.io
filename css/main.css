@@ -185,8 +185,9 @@ input{
 .infograf-cell{
 	height: 400px;
 }
-
-
+.infograf p {
+    width: 80%;
+    margin: 0 auto;}
 
 .num-questions{
 	top:90px;
