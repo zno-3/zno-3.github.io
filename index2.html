@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <link href="css/bootstrap_custom.css" rel="stylesheet" type="text/css" />
+ <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+	<title>Document</title>
+</head>
+
+<body>
+
+
+<div class="container-fluid">
+<header>
+	<div class="up-logo-line"></div>
+	<div class="middle-logo-line"></div>
+	<div class="down-logo-line"></div>
+
+	<div class="logo"><span>Recruitment niche</span>
+	<img src="img/logo.png">
+	<span>domination test</span></div>
+</header>
+
+
+
+
+<main>
+<br><br><br><br><br><br><br>
+<div class="row col-xs-12">
+	<div>
+		<div class="num-questions">10</div>
+		<canvas id="canvas_1" width="220" height="220"></canvas>
+<br><br><br><br>
+	</div>
+</div>
+
+
+<div class="row col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+<h4> Do you have a blog that attacts candidates and a way of
+capturing their details when they land on your website?	
+</h4>
+<br><br>
+</div>
+<div class="bottom-btn-box">
+	<div class="button_orange">YES</div>
+	<div class="button_grey">NO</div>
+</div>
+</main>
+
+<footer>
+	
+	<div class="down-footer-line"></div>
+	<div class="middle-footer-line"><br>
+	<h5>When you have finished look out for 6 page report with your results and a road map  to making your business more successful</h5>
+	</div>
+
+
+
+</footer>
+
+	
+</div>
+	
+</body>
+
+
+<script>
+	var canvas = document.getElementById("canvas_1");
+  	var context = canvas.getContext("2d");
+	var w = 218; 
+	var h = 218;
+
+
+	function drawRound(x,y,r, start, finish, color, w){
+
+  	context.lineWidth=w;
+	context.strokeStyle = color;
+	context.beginPath();   	
+	context.arc(x,y,r,start,finish,false);
+  	context.stroke();
+  	context.closePath();  	
+	}
+
+
+
+drawRound(w/2, h/2, 105, 0, 2*Math.PI, "#858585", 2);
+drawRound(w/2, h/2, 85, 0, 2*Math.PI, "#e74710", 2);
+drawRound(w/2, h/2, 95, 1.5*Math.PI, 2*Math.PI, "#e74710", 20);
+ 
+
+var quest = new Image();
+quest.src = "img/question.png";
+quest.onload = function() {context.drawImage(quest, 42, 65);}	
+
+
+
+</script>
+</html>

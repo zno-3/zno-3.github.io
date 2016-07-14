@@ -1,0 +1,319 @@
+@font-face {
+    font-family: Museo; /* имя шрифта для CSS правил */
+    src: local("Museo"), /* проверяем наличие шрифта в ОС пользователя */
+         url(../fonts/Museo_Cyrillic.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+
+
+body{
+	font-family: "Museo";
+}
+main{
+	text-align: center;
+}
+
+
+/*~~~~~~~~~~~~~~ HEADER ~~~~~ FOOTER~~~~~~~~~~~~~~~~~*/
+header span{
+	color: #fff;
+	font-size: 14px;
+	line-height: 50px;
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+}
+.up-logo-line{
+	height: 12px;
+	background: #e74710;
+}
+
+.middle-footer-line{
+	height: 100px;
+	background: #848484;
+	color:#fff;
+	padding-top: 5px;
+}
+.down-footer-line{
+	height: 12px;
+	background: #5a5a5a;
+}
+.middle-logo-line{
+	height: 50px;
+	background: #848484;
+	color:#fff;
+	padding-top: 5px;
+}
+
+.down-logo-line{
+	height: 6px;
+	background: #5a5a5a;
+}
+
+footer img{margin:7px 20px;}
+
+
+.logo{
+    width: 100%;
+    top: 12px;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+}
+
+.logo img{
+    width: 115px;
+
+
+}
+
+
+header, footer{
+	text-align: center;
+	margin:0 -15px;
+}
+
+footer .middle-footer-line, footer .down-footer-line{
+	width: 100%;
+	float: left;
+}
+
+
+
+/*~~~~~~~~~~~~~~ BUTTON ~~~~~~~~~~~~~~~~~*/
+
+.button_orange, .button_grey{	
+	color: #fff;
+	padding: 5px 0px;
+	text-align: center;
+	font-size: 20px;
+	cursor: pointer;
+	width: 150px;
+	display: inline-block;} 
+
+.button_orange:hover{
+	box-shadow: 0 0 2px 2px #555;
+}
+.button_grey:hover{
+	box-shadow: 0 0 2px 2px #e74710;
+}
+
+.button_orange {background: #e74710;}
+.button_grey   {background: #848484;}
+
+.bottom-btn-box{
+	margin-top: 25px;
+	margin-bottom: 30px;
+	width: 100%;
+	float: left;
+}
+.bottom-btn-box .button_grey,
+.bottom-btn-box .button_orange{
+margin: 0px;
+}
+
+/*~~~~~~~~~ H1 ~ H2 ~ H3 ~ H4 ~ H5 ~ H6 ~~~~~~~~~~~~*/
+
+h1{	color: #e74710;	font-size: 45px; margin-top: 5px; margin-bottom: 5px;}
+h3{	color: #848484;	font-size: 30px; margin-top: 5px; margin-bottom: 5px;}
+h4{	color: #000;	font-size: 30px; margin-top: 5px; margin-bottom: 5px;}
+h5{ color: #fff;	font-size: 18px; margin-top: 5px; margin-bottom: 5px;}
+
+
+/*~~~~~~~~~ INPUT ~~~~~~~~~~~~*/
+
+.inp-label{
+	border:2px #e74710 solid;
+	color: #e74710;
+	font-size: 22px;
+
+	height: 47px;
+	display: inline-block;
+	line-height: 45px;
+	text-align: center;
+	vertical-align: top;
+	padding: 0 15px;
+    margin-left: -30px;
+    width: 100%;
+}
+
+input{
+	background: #ccc;
+	color: #000;
+	height: 45px;
+	border:2px #ccc solid;
+	padding-left: 30px;
+	width: 100%;
+	margin-left: -30px;
+}
+
+
+
+
+
+
+.grey-title{
+	background: #848484;
+	color: #fff;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 32px;
+}
+.orange-title{
+	color: #fff;
+	background: #e74710;
+	font-size: 40px;
+	padding: 5px 0px;
+	text-align: center;
+}
+
+
+
+.form-row{
+	margin-bottom: 22px;
+}
+
+.arrow-sketch{
+	text-align: center;
+	margin-top:20px;
+	margin-bottom: 35px;
+	width: 100%;
+	float: left;
+}
+
+
+.infograf-cell{
+	height: 400px;
+}
+
+
+
+.num-questions{
+	top:90px;
+	position: absolute;
+	color: #e74710;
+	font-size: 60px;
+	margin: 0 auto;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+}
+
+
+
+
+
+@media (min-width: 500px) {
+
+/*~~~~~~~~~~~~~~ HEADER ~~~~~ FOOTER~~~~~~~~~~~~~~~~~*/
+header span{
+	font-size: 25px;
+	line-height: 70px;
+    width: 250px;
+}
+
+.middle-logo-line{
+	height: 70px;
+	padding-top: 5px;
+}
+
+.down-logo-line{
+	height: 9px;
+	background: #5a5a5a;
+}
+
+.logo img{
+    width: 155px;
+}
+
+.bottom-btn-box .button_grey,
+.bottom-btn-box .button_orange{
+margin: 0 15px;}
+
+
+
+.inp-label{
+	padding: 0 15px;
+    margin-left: -35px;
+    width: 37%;
+}
+
+input{
+
+	padding-left: 30px;
+	width: 50%;
+	margin-left: 0px;
+}
+
+
+
+
+
+
+}
+
+@media (min-width: 992px) {
+header span{
+	font-size: 25px;
+	line-height: 100px;
+    width: 250px;
+}
+
+.middle-logo-line{
+	height: 100px;
+	padding-top: 5px;
+}
+
+
+.down-logo-line{
+	height: 12px;
+	background: #5a5a5a;}
+
+.logo img{
+    width: 230px;}
+
+    .inp-label{
+	padding: 0 15px;
+    margin-left: -35px;
+    width: 20%;
+}
+
+input{
+
+	padding-left: 30px;
+	width: 70%;
+	margin-left: 0px;
+}
+
+}
+
+
+
+
+@media (min-width: 1200px) {
+header span{
+	font-size: 25px;
+	line-height: 100px;
+    width: 250px;
+}
+
+.middle-logo-line{
+	height: 100px;
+	padding-top: 5px;
+}
+
+
+.down-logo-line{
+	height: 12px;
+	background: #5a5a5a;
+}
+
+.logo img{
+    width: 230px;
+}
+
+}
+
+
+
+
+
