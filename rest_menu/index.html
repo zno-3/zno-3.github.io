@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<!--Modal popup-->
+
+<div id="myModalBox" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Заголовок модального окна -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <span class="food-name-modal"></span>
+      </div>
+      <!-- Основное содержимое модального окна -->
+      <div class="modal-body">
+      
+<div class="col-xs-12 col-sm-6">
+<div class="food-thumb-modal">
+	
+</div>
+</div>
+<div class="col-xs-12 col-sm-6">
+Price per unit: $<span class="unit-price-modal"></span><br>
+
+
+Quantity: 
+
+<span class="qty-wrap">
+		<div class="input-group input-num-food">
+		  <span id="low_food_btn" class="input-group-addon"><span class="glyphicon glyphicon-minus"></span></span>
+		  <input type="text" id="num_food" class="form-control" value="1">
+		  <span id="hi_food_btn" class="input-group-addon"><span class="glyphicon glyphicon-plus"></span></span>
+		</div>
+</span><br>
+
+<b>Total price: $<span class="total-price-modal"></span></b>
+</div>
+<div class="clear"></div>
+
+
+<div id="modal-massage-error"></div>
+      </div>
+      <!-- Футер модального окна -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary add-to-cart">ADD TO ORDER</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal popup-->
+
+
+
+
+
+
+<div class="container">
+<div class="row">
+<div class="right-col col-xs-12 col-sm-4 col-sm-push-8">
+
+<div class="cart-box">
+
+		<div class="cart-title">
+			<span class="glyphicon glyphicon-shopping-cart"></span>
+			Cart
+		</div>
+
+
+	<div class="cart_tr_top">
+	    <div class="cart_item">
+	        <div class="cart_td_name">
+	           Item
+	        </div>
+	        <div class="cart_td_num">
+	            Qty
+	        </div>
+	        <div class="cart_td_price">Price</div>
+	        <div class="cart_td_del"></div>
+	    </div>
+	    <div class="clear"></div>
+	    <hr>
+	</div>
+
+
+	<div class="cart_tr"></div>
+	<div class="clear"></div>
+	<div class="cart_total_price">
+		<hr>
+		TOTAL <span></span>
+	</div>
+</div>
+
+</div>
+
+<div  class="left-col col-xs-12 col-sm-8 col-sm-pull-4">
+      
+          <ul class="list-group">
+		    <li class="list-group-item">APPETIZERS<span class="glyphicon glyphicon-chevron-down"></span></li>
+
+            <div class="dropdown">
+                <ul>
+                    <li>
+                    	<div class="food-item">
+                            	<p class="food-price">$6.50</p>
+                                <h3 class="food-name">Hummus</h3>                    	
+                            <div class="food-thumb">
+                                <img src="images/food/Hummus.jpg" alt="Hummus">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info"> Chickpeas blended with garlic, tahini, lemon juice, olive oil and spices </p>
+                            </div>
+                                                
+                                            </div>
+                    </li>
+                    <li>
+                    	<div class="food-item">
+                            <p class="food-price">$6.75</p>
+                                <h3 class="food-name">Spicy Hummus</h3>                    	
+                            <div class="food-thumb">
+                                <img src="images/food/SpicyHummus.jpg" alt="Spicy Hummus">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">Spicy blend of our hummus mixed with roasted red pepper</p>
+                            </div>
+                                                
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="food-item">
+                            <p class="food-price">$6.75</p>
+                                <h3 class="food-name">Babaganoush</h3>                    	
+                    	    <div class="food-thumb">
+                                <img src="images/food/Babaganoush.jpg" alt="Babaganoush">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">Eggplant blended with garlic, tahini, lemon juice, olive oil, and spices</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="food-item">
+                            <p class="food-price">$6.50</p>
+                                <h3 class="food-name">Ezme</h3>                    	
+                            <div class="food-thumb">
+                                <img src="images/food/NoImage.jpg" alt="Ezme">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">
+                                    Finely chopped tomatoes, onions, spicy red peppers, garlic and parsley
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+			</div>
+
+
+
+		    <li class="list-group-item">PIDES/FLATBREADS<span class="glyphicon glyphicon-chevron-down"></span></li>          	
+
+            <div class="dropdown">
+                <ul>
+                    <li>
+                    	<div class="food-item">
+                            <p class="food-price">$9.00</p>
+                                <h3 class="food-name">Lahmacun</h3>                    	
+                            <div class="food-thumb">
+                                <img src="images/food/Lahmacun.jpg" alt="Lahmacun">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">Ground beef mixture on thin crust</p>
+                            </div>
+                         </div>
+                	</li>
+                    <li>
+                    	<div class="food-item">
+                            <p class="food-price">$11.25</p>
+                                <h3 class="food-name">Vegetarian</h3>                    	
+                            <div class="food-thumb">
+                                <img src="images/food/NoImage.jpg" alt="Vegetarian">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">
+                                    Onions, mushroom, corn, green peppers tomatoes and mozzarella
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="food-item">
+                            <p class="food-price">$12.25</p>
+                                <h3 class="food-name">Chicken</h3>                    	
+                            <div class="food-thumb">
+                                <img src="images/food/NoImage.jpg" alt="Chicken">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">
+                                    Garlic sauce, chicken, tomatoes, onions, green peppers and mozzarella
+                                </p>
+                            </div>
+                         </div>
+                    </li>
+                </ul>
+			</div>
+
+
+
+		    <li class="list-group-item">ENTREES<span class="glyphicon glyphicon-chevron-down"></span></li>          	
+
+            <div class="dropdown">
+                <ul>
+                    <li>
+						<div class="food-item">
+                            	<p class="food-price">$15.00</p>
+                                <h3 class="food-name">Iskender</h3>						
+                           <div class="food-thumb">
+                                <img src="images/food/Iskender.jpg" alt="Iskender">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">Doner placed over small cubes of crispy pita bread, toppedServed with yogurt on the side</p>
+                         	</div>                      
+                        </div>
+                	</li>
+                    <li>
+                    	<div class="food-item">
+                            <p class="food-price">$11.25</p>
+                                <h3 class="food-name">Vegetarian</h3>                    	
+                            <div class="food-thumb">
+                                <img src="images/food/NoImage.jpg" alt="Vegetarian">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">
+                                    Onions, mushroom, corn, green peppers tomatoes and mozzarella
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="food-item">
+                            	<p class="food-price">$12.25</p>
+                            	<h3 class="food-name">Chicken</h3>                    	
+                            <div class="food-thumb">
+                                <img src="images/food/NoImage.jpg" alt="Chicken">
+                            </div>
+                            <div class="food-detail">
+
+                            	<p class="food-info">Garlic sauce, chicken, tomatoes, onions, green peppers and mozzarella</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>         	
+
+			<li class="list-group-item">SIDES<span class="glyphicon glyphicon-chevron-down"></span></li>          	
+
+            <div class="dropdown">
+                <ul>
+                    <li>
+						<div class="food-item">
+	                        	<p class="food-price">$2.00</p>
+	                            <h3 class="food-name">Garden Salad</h3>						
+	                        <div class="food-thumb">
+	                            <img src="images/food/NoImage.jpg" alt="Garden Salad">
+	                        </div>
+	                        <div class="food-detail">
+
+	                            <p class="food-info">Crispy romaine hearts, tomatoes, cucumbers, onions, carrots, red cabbage, and green peppers served with our special dressing</p>
+	                        </div>
+                        </div>
+                	</li>
+                    <li>
+						<div class="food-item">
+                             	<p class="food-price">$3.00</p>
+                                <h3 class="food-name">Coban Salad</h3>						
+                            <div class="food-thumb">
+                                <img src="images/food/NoImage.jpg" alt="Coban Salad">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">Chopped tomatoes, cucumbers red onions, green peppers, black olives and feta cheese served with vinaigrette dressing</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+						<div class="food-item">
+                            	<p class="food-price">$3.00</p>
+                                <h3 class="food-name">Greek Salad</h3>						
+                            <div class="food-thumb">
+                                <img src="images/food/NoImage.jpg" alt="Greek Salad">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">		</p>
+                            </div>
+                                                
+                        </div>
+                    </li>
+                </ul>
+            </div>
+          
+			<li class="list-group-item">DESSERTS<span class="glyphicon glyphicon-chevron-down"></span></li>          	
+
+            <div class="dropdown">
+                <ul>
+                    <li>
+						<div class="food-item">
+                            	<p class="food-price">$6.00</p>
+                                <h3 class="food-name">Chocolate Mousse</h3>						
+                            <div class="food-thumb">
+                                <img src="images/food/ChocolateMousse.jpg" alt="Chocolate Mousse">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">Rich chocolate mousse and zabaoine, topped with chocolate curls</p>
+                            </div>
+                        </div>
+                	</li>
+                    <li>
+						<div class="food-item">
+                            	<p class="food-price">$6.00</p>
+                                <h3 class="food-name">Triple Chocolate Mousse</h3>						
+                            <div class="food-thumb">
+                                <img src="images/food/TripleChocolateMousse.jpg" alt="Triple Chocolate Mousse">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">Delicious combination of silky dark, milk and white chocolate creams</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+						<div class="food-item">
+                            	<p class="food-price">$6.00</p>
+                                <h3 class="food-name">Tiramisu</h3>						
+                            <div class="food-thumb">
+                                <img src="images/food/Tiramisu.jpg" alt="Tiramisu">
+                            </div>
+                            <div class="food-detail">
+
+                                <p class="food-info">Sponge cake soaked in espresso, topped with mascarpone cream and dusted with cocoa powder</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+</ul>
+
+
+
+
+<div class="clear"></div>
+
+</div>
+
+<div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</body>
+</html>
